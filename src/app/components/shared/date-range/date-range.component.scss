@@ -1,0 +1,52 @@
+.dropdown-menu .dropdown-item:focus,
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu > li > a:focus,
+.dropdown-menu > li > a:hover {
+  background-color: #e9ecef;
+  color: #16181b;
+}
+
+/* Menu de Calendario fechas */
+.menu-calendar .dropdown-item:focus,
+.menu-calendar .dropdown-item:hover,
+.menu-calendar > li > a:focus,
+.menu-calendar > li > a:hover {
+  background-color: #1f94f1;
+  color: #fbfbfb !important;
+}
+
+.menu-calendar {
+  padding: 5px;
+}
+
+.menu-calendar .dropdown-item {
+  background: #f5f5f5;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  border-radius: 3px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  color: #216ba7 !important;
+  font-size: 0.9rem;
+}
+/* Menu de Calendario fechas */
+
+.calendar-icon::after {
+  margin-right: 10px;
+}
+.dropdown-item {
+  cursor: pointer;
+}
+.input-date {
+  border-right: none;
+  padding-right: 3px;
+}
+
+#dropdownMenuButton1::after {
+  display: none !important;
+}
+
+#basic-addon2 {
+  background-color: #fff !important;
+  color: #2282ff;
+}

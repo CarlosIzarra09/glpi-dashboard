@@ -1,0 +1,68 @@
+<div class="input-group">
+  <input
+    (bsValueChange)="onChange($event)"
+    bsDaterangepicker
+    type="text"
+    class="form-control form-control-sm input-date"
+    [(ngModel)]="dates"
+    placeholder="Periodo de consulta"
+    aria-label="Periodo de consulta"
+    aria-describedby="basic-addon2"
+  />
+  <div class="input-group-append">
+    <span class="input-group-text" id="basic-addon2">
+      <div class="dropdown">
+        <i
+          class="fa-solid fa-calendar-days dropdown-toggle calendar-icon"
+          type="button"
+          id="dropdownMenuButton1"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        ></i>
+
+        <ul
+          class="dropdown-menu menu-calendar"
+          aria-labelledby="dropdownMenuButton1"
+        >
+          <li>
+            <a class="dropdown-item" (click)="onSelectedOption('hoy')">Hoy</a>
+          </li>
+          <li>
+            <a class="dropdown-item" (click)="onSelectedOption('ayer')">Ayer</a>
+          </li>
+          <li>
+            <a class="dropdown-item" (click)="onSelectedOption('7dias')"
+              >Últimos 7 días</a
+            >
+          </li>
+          <li>
+            <a class="dropdown-item" (click)="onSelectedOption('30dias')"
+              >Últimos 30 días</a
+            >
+          </li>
+
+          <li>
+            <a class="dropdown-item" (click)="onSelectedOption('estemes')"
+              >Este mes</a
+            >
+          </li>
+          <li>
+            <a class="dropdown-item" (click)="onSelectedOption('esteanho')"
+              >Este año</a
+            >
+          </li>
+          <li>
+            <a class="dropdown-item" (click)="onSelectedOption('mespasado')"
+              >El mes pasado</a
+            >
+          </li>
+          <li>
+            <a class="dropdown-item" (click)="onSelectedOption('anhopasado')"
+              >El año pasado</a
+            >
+          </li>
+        </ul>
+      </div>
+    </span>
+  </div>
+</div>
