@@ -1,0 +1,239 @@
+@import "~@ng-select/ng-select/themes/default.theme.css";
+@import "_variables";
+@font-face {
+  font-family: GothamRounded-Medium;
+  src: url(/assets/font/gothamrounded-medium.eot);
+  src: url(/assets/fonts/GothamRounded-Medium.woff) format("woff"),
+    url(/assets/fonts/GothamRounded-Medium.ttf) format("truetype"),
+    url(/assets/fonts/GothamRounded-Medium.svg#futura_bk_btbook) format("svg");
+}
+@font-face {
+  font-family: GothamRounded-Bold;
+  src: url(/assets/fonts/GothamRounded-Bold.eot);
+  src: url(/assets/fonts/GothamRounded-Bold2.eot?#iefix)
+      format("embedded-opentype"),
+    url(/assets/fonts/GothamRounded-Bold.woff) format("woff"),
+    url(/assets/fonts/GothamRounded-Bold.ttf) format("truetype"),
+    url(/assets/fonts/GothamRounded-Bold#futura_bk_btbook) format("svg");
+}
+@font-face {
+  font-family: GothamRounded-Book;
+  src: url(/assets/fonts/GothamRounded-Book.eot);
+  src: url(/assets/fonts/GothamRounded-Book-ie.eot?#iefix)
+      format("embedded-opentype"),
+    url(/assets/fonts/GothamRounded-Book.woff) format("woff"),
+    url(/assets/fonts/GothamRounded-Book.ttf) format("truetype"),
+    url(/assets/fonts/GothamRounded-Book.svg#futura_bk_btbook) format("svg");
+}
+
+* {
+  /*  margin: 0;
+  padding: 0; */
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  background-color: #f2f3fa;
+  font-family: GothamRounded-Book;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.card {
+  margin-bottom: 25px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 8%);
+  border-radius: 0.3rem;
+  border: none;
+  position: inherit !important;
+
+  .card-head {
+    padding: 0 20px;
+    border-bottom: 1px solid #eee;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 60px;
+
+    .card-title {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 0rem;
+    }
+  }
+  .card-head-strech {
+    min-height: 45px;
+    height: 45px;
+  }
+}
+.title-nro-rows {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  color: #737373 !important;
+}
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: none !important;
+  background: none;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  background-color: #f5f5f5;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  border-radius: 20px;
+}
+
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected,
+.ng-dropdown-panel
+  .ng-dropdown-panel-items
+  .ng-option.ng-option-selected.ng-option-marked {
+  background-color: $color-primary-blue;
+  color: #fff;
+  font-size: 14px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.ng-dropdown-panel .ng-dropdown-panel-items {
+  font-size: 14px !important;
+  margin: 3px;
+}
+
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-marked {
+  background-color: #d9ebff;
+  font-size: 14px;
+  margin-right: 3px;
+  border-radius: 5px;
+}
+
+ng-select.ng-invalid.ng-touched .ng-select-container {
+  border-color: #dc3545;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 3px #fde6e8;
+}
+.required {
+  color: red;
+  font-weight: 300;
+  margin-top: 3px;
+  font-size: 14px;
+}
+
+.margin-top-25 {
+  margin-top: 25px;
+}
+.margin-top-35 {
+  margin-top: 35px;
+}
+
+.body-title {
+  font-size: 1.5rem;
+}
+
+.dropdown-item > i {
+  color: #4c86c5;
+  font-size: 1.2rem !important;
+}
+
+.table {
+  font-size: 12px;
+}
+.table thead tr th {
+  height: 40px !important;
+  font-weight: bold;
+}
+
+.thead-default tr {
+  box-shadow: 0 9px 5px -7px #a17b7b38;
+}
+
+.thead-default tr th {
+  background: #f9f9f9 !important;
+  border-bottom: solid 3px #007bff !important;
+  vertical-align: middle;
+}
+
+.text-12 {
+  font-size: 12px;
+}
+.text-13 {
+  font-size: 13px;
+}
+.text-25 {
+  font-size: 25px;
+}
+.text-muted {
+  color: #7987a1 !important;
+}
+
+.font-weight-semibold {
+  font-weight: 600 !important;
+}
+
+.btn-blue {
+  background: #2282ff;
+  color: #fff;
+}
+
+.btn-blue:hover {
+  background: #0f72f3;
+  color: #fff;
+}
+
+.padding-top-30 {
+  padding-top: 30px !important;
+}
+
+.link {
+  color: $color-primary-blue;
+}
+.link:hover {
+  text-decoration: underline;
+}
+
+/* BlockUI  */
+.block-ui-wrapper {
+  background: rgb(255 255 255 / 85%) !important;
+}
+
+.block-ui-spinner {
+  background: rgb(189 189 189 / 85%);
+}
+
+.block-ui-spinner .message {
+  color: #565656 !important;
+}
+
+.block-ui-spinner .loader {
+  content: "sdds";
+}
+/* Fin BlockUI  */
+
+.alert-warningx {
+  color: #856404 !important;
+  background-color: #fff3cd !important;
+  border-color: #ffeeba !important;
+}
+
+.alert {
+  position: inherit;
+}
+
+pagination {
+  font-size: 12px !important;
+}
+.pagination {
+  justify-content: flex-end;
+}
+

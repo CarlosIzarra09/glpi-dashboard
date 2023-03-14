@@ -20,15 +20,42 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/.htaccess"
             ],
             "styles": [
-              "src/styles.css"
+              "node_modules/animate.css/animate.min.css",
+              "src/assets/vendors/bootstrap/css/bootstrap.min.css",
+              "src/styles.scss",
+              "src/assets/vendors/fontawesome/all.min.css",
+              "src/assets/vendors/ngx-bootstrap/bs-datepicker.css",
+              "src/assets/vendors/bs-stepper/bs-stepper.min.css",
+              "src/assets/vendors/pnotify/PNotifyBrightTheme.css"
             ],
-            "scripts": []
+            "stylePreprocessorOptions": {
+              "includePaths": ["src/assets/scss"]
+            },
+            "scripts": [
+              "src/assets/vendors/highcharts/highcharts.js",
+              "src/assets/vendors/highcharts/exporting.js",
+              "src/assets/vendors/highcharts/export-data.js",
+              "src/assets/vendors/highcharts/accessibility.js",
+              "src/assets/vendors/bootstrap/js/popper.min.js",
+              "src/assets/vendors/bootstrap/js/bootstrap.min.js"
+            ],
+            "allowedCommonJsDependencies": [
+              "sweetalert2",
+              "bs-stepper",
+              "moment",
+              "crypto-js"
+            ]
           },
           "configurations": {
             "production": {
+              "index": {
+                "input": "src/index.prod.html",
+                "output": "index.html"
+              },
               "budgets": [
                 {
                   "type": "initial",

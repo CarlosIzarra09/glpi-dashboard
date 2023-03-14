@@ -1,0 +1,328 @@
+<h1 class="body-title">Dashboard</h1>
+<div class="row" *ngIf="contentLoaded">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body"><app-skeleton-loading></app-skeleton-loading></div>
+    </div>
+  </div>
+</div>
+
+<div class="row" *ngIf="!contentLoaded">
+  <div class="col-xl-3 col-lg-4 col-md-6 col-xs-12">
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-8">
+            <div class="ps-2 pt-2 pe-2 pb-2">
+              <div class="">
+                <h6 class="mb-2 text-13">Tickets de hoy</h6>
+              </div>
+              <div class="pb-0 mt-0">
+                <div class="d-flex">
+                  <h4 class="text-25 font-weight-semibold mb-2">
+                    {{ getIndicator?.txd?.total }}
+                  </h4>
+                </div>
+                <p class="mb-0 text-13 text-muted">
+                  Ayer
+                  <i class="fa fa-caret-up mx-2 text-success"></i>
+                  <span class="text-success font-weight-semibold">
+                    +{{ getIndicator?.txdy?.total }}</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-4 d-flex align-items-center justify-content-center">
+            <div
+              class="icon-indicador icon-indicador-green d-flex align-items-center justify-content-center"
+            >
+              <i class="fa-solid fa-calendar-day"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="col-xl-3 col-lg-4 col-md-6 col-xs-12 animate__animated animate__fadeIn"
+  >
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-8">
+            <div class="ps-2 pt-2 pe-2 pb-2">
+              <div class="">
+                <h6 class="mb-2 text-13">Tickets del mes</h6>
+              </div>
+              <div class="pb-0 mt-0">
+                <div class="d-flex">
+                  <h4 class="text-25 font-weight-semibold mb-2">
+                    {{ getIndicator?.txm?.total }}
+                  </h4>
+                </div>
+                <p class="mb-0 text-13 text-muted">
+                  <!-- El mes pasado -->
+                  <span
+                    ><b>{{ getIndicator?.txm?.name }}</b></span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-4 d-flex align-items-center justify-content-center">
+            <div
+              class="icon-indicador icon-indicador-blue d-flex align-items-center justify-content-center"
+            >
+              <i class="fa-solid fa-calendar-days"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="col-xl-3 col-lg-4 col-md-6 col-xs-12 animate__animated animate__fadeIn"
+  >
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-8">
+            <div class="ps-2 pt-2 pe-2 pb-2">
+              <div class="">
+                <h6 class="mb-2 text-13">Total de tickets</h6>
+              </div>
+              <div class="pb-0 mt-0">
+                <div class="d-flex">
+                  <h4 class="text-25 font-weight-semibold mb-2">
+                    {{ getIndicator?.txt?.total }}
+                  </h4>
+                </div>
+                <p class="mb-0 text-13 text-muted">Tickets generados</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-4 d-flex align-items-center justify-content-center">
+            <div
+              class="icon-indicador icon-indicador-red d-flex align-items-center justify-content-center"
+            >
+              <i class="fa-solid fa-clipboard-list"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="col-xl-3 col-lg-4 col-md-6 col-xs-12 animate__animated animate__fadeIn"
+  >
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-8">
+            <div class="ps-2 pt-2 pe-2 pb-2">
+              <div class="">
+                <h6 class="mb-2 text-13">Tickets</h6>
+              </div>
+              <div class="pb-0 mt-0">
+                <div class="d-flex">
+                  <h4 class="text-25 font-weight-semibold mb-2">
+                    {{ getIndicator?.tl?.total }}
+                  </h4>
+                </div>
+                <p class="mb-0 text-13 text-muted">Late</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-4 d-flex align-items-center justify-content-center">
+            <div
+              class="icon-indicador icon-indicador-purple d-flex align-items-center justify-content-center"
+            >
+              <i class="fa-solid fa-clock"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row" *ngIf="!contentLoaded">
+  <div class="col-xl-12 col-lg-12 col-md-12 col-xs-12">
+    <div class="card char-evolution">
+      <figure class="highcharts-figure">
+        <div id="container00"></div>
+      </figure>
+    </div>
+  </div>
+
+  <div class="col-xl-6 col-lg-6 col-md-6 col-xs-12">
+    <div class="card">
+      <figure class="highcharts-figure">
+        <div id="container01" class="w-100"></div>
+      </figure>
+    </div>
+  </div>
+
+  <div class="col-xl-6 col-lg-6 col-md-6 col-xs-12">
+    <div class="card">
+      <figure class="highcharts-figure">
+        <div id="container02"></div>
+      </figure>
+    </div>
+  </div>
+
+  <div class="col-xl-6 col-lg-6 col-md-6 col-xs-12">
+    <div class="card">
+      <figure class="highcharts-figure">
+        <div id="container03"></div>
+      </figure>
+    </div>
+  </div>
+  <div class="col-xl-6 col-lg-6 col-md-6 col-xs-12">
+    <div class="card">
+      <figure class="highcharts-figure">
+        <div id="container04" class="w-100"></div>
+      </figure>
+    </div>
+  </div>
+
+  <div class="col-xl-6 col-lg-6 col-md-6 col-xs-12">
+    <div class="card">
+      <figure class="highcharts-figure">
+        <div id="container05" class="w-100"></div>
+      </figure>
+    </div>
+  </div>
+
+  <!--<div class="col-xl-6 col-lg-6 col-md-6 col-xs-12">
+    <div class="card">
+      <div class="d-flex card-head card-head-strech">
+        Tickets aperturados por agente
+      </div>
+
+      <div class="card-body">
+        <div class="row">
+          <div class="col-12">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Agente</th>
+                  <th scope="col">N° de tickets aperturados</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr
+                  *ngFor="let item of listTicketsOpenAgent.data; let i = index"
+                >
+                  <th scope="row">{{ i + 1 }}</th>
+                  <td>{{ item.name || "" }} {{ item.sname || "" }}</td>
+                  <td>{{ item.tickets || "" }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>-->
+
+  <!--<div class="col-xl-12 col-lg-6 col-md-12 col-xs-12">
+    <div class="card">
+      <div class="d-flex card-head card-head-strech">
+        Últimos tickets registrados
+      </div>
+
+      <div class="card-body">
+        <div class="row">
+          <div class="col-12">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Tipo de Solicitud</th>
+                  <th scope="col">Categoría</th>
+                  <th scope="col">Ubicación</th>
+                  <th scope="col">Creado por</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of listDataLastTickets; let i = index">
+                  <th scope="row">{{ i + 1 }}</th>
+                  <td>{{ item.request_source || "" }}</td>
+                  <td>{{ item.itilcategorie_name || "" }}</td>
+                  <td>{{ item.location_name || "" }}</td>
+                  <td>{{ item.By || "" }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>-->
+
+  <!--<div class="col-xl-6 col-lg-6 col-md-6 col-xs-12">
+    <div class="card">
+      <div class="d-flex card-head card-head-strech">Últimos eventos</div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-12">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Tipo</th>
+                  <th scope="col">Fecha</th>
+                  <th scope="col">Mensaje</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of userOnline.data; let i = index">
+                  <th scope="row">{{ i + 1 }}</th>
+                  <td>{{ item.type || "" }}</td>
+                  <td>{{ item.date | date: "d/M/yyyy h:mm:ss" }}</td>
+                  <td>{{ item.message }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>-->
+
+  <!--<div class="col-xl-6 col-lg-6 col-md-6 col-xs-12">
+    <div class="card">
+      <div class="d-flex card-head card-head-strech">Usuarios conectados</div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-12">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Usuario</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of userOnline.data; let i = index">
+                  <th scope="row">{{ i + 1 }}</th>
+                  <td>{{ item.type || "" }}</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">1</th>
+                  <td>perueduca90</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>-->
+</div>

@@ -1,0 +1,130 @@
+<header class="header position-relative" [ngClass]="getHeaderClass()">
+  <div
+    class="d-flex header-container align-items-center justify-content-between"
+  >
+    <div class="icon-bar">
+      <h5 class="mb-0" *ngIf="collapsed">
+        <strong>DITE</strong>
+      </h5>
+    </div>
+
+    <div class="main-profile">
+      <ul class="nav navbar-toolbar">
+        <li class="dropdown dropdown-user dropdown-roles">
+          <i class="fa-solid fa-user-gear"></i>
+          <!--<ng-select
+            class="cbo-roles"
+            name="rolId"
+            [disabled]="roles.length === 1"
+            [items]="roles"
+            [(ngModel)]="rolId"
+            bindLabel="NOMBRE_ROL"
+            [clearable]="false"
+            (change)="getMenuRol($event)"
+            bindValue="ID_ROL"
+            placeholder="[ Todas ]"
+          >
+          </ng-select>-->
+        </li>
+
+        <li class="dropdown dropdown-user">
+          <a
+            class="user-icon nav-link profile-user d-flex align-items-center"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img alt="" src="../assets/image/face.png" />
+            <span
+              >{{
+                'NOMBRES_USUARIO'
+              }}
+              {{
+                'APELLIDO_PATERNO'
+              }}</span
+            >
+            <i class="fa-solid fa-angle-down"></i>
+          </a>
+          <div class="dropdown-menu">
+            <div class="menu-header-content p-3 border-bottom">
+              <div class="d-flex wd-100p">
+                <div class="ms-3 my-auto">
+                  <h6 class="tx-15 font-weight-semibold mb-0">
+                    {{
+                      'NOMBRES_USUARIO'
+                    }}
+                    {{
+
+                        'APELLIDO_PATERNO'
+                    }}
+                  </h6>
+                  <span class="dropdown-title-text subtext op-6 tx-12">{{
+                    'rol.NOMBRE_ROL'
+                  }}</span>
+                </div>
+              </div>
+            </div>
+            <a class="dropdown-item"
+              ><i class="fa-solid fa-rotate-right"></i> Cambiar contraseña</a
+            >
+            <a class="dropdown-item"
+              ><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión</a
+            >
+          </div>
+        </li>
+      </ul>
+
+      <!-- <a
+        class="nav-link profile-user d-flex align-items-center"
+        aria-expanded="false"
+      >
+        <i class="fa-solid fa-user-gear"></i>
+        <span>
+          <select name="" class="form-control" id="">
+            <option value="1">Agente</option>
+            <option value="1">Supervisor</option>
+          </select>
+        </span>
+        <i class="fa-solid fa-angle-down"></i>
+      </a>
+      <a
+        class="user-icon nav-link profile-user d-flex align-items-center"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <img alt="" src="../assets/image/face.png" />
+        <span
+          >{{ dataAuthenticate.dataAuth.AuthUsuario.Data[0].NOMBRES_USUARIO }}
+          {{
+            dataAuthenticate.dataAuth.AuthUsuario.Data[0].APELLIDO_PATERNO
+          }}</span
+        >
+        <i class="fa-solid fa-angle-down"></i>
+      </a>
+      <div class="dropdown-menu">
+        <div class="menu-header-content p-3 border-bottom">
+          <div class="d-flex wd-100p">
+            <div class="ms-3 my-auto">
+              <h6 class="tx-15 font-weight-semibold mb-0">
+                {{
+                  dataAuthenticate.dataAuth.AuthUsuario.Data[0].NOMBRES_USUARIO
+                }}
+                {{
+                  dataAuthenticate.dataAuth.AuthUsuario.Data[0].APELLIDO_PATERNO
+                }}
+              </h6>
+              <span class="dropdown-title-text subtext op-6 tx-12">{{
+                nombreRol
+              }}</span>
+            </div>
+          </div>
+        </div>
+        <a class="dropdown-item" (click)="changePassword()"
+          ><i class="fa-solid fa-rotate-right"></i> Cambiar contraseña</a
+        >
+        <a class="dropdown-item" (click)="logout()"
+          ><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión</a
+        >
+      </div> -->
+    </div>
+  </div>
+</header>
