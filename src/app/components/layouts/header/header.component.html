@@ -64,67 +64,20 @@
               </div>
             </div>
             <a class="dropdown-item"
-              ><i class="fa-solid fa-rotate-right"></i> Cambiar contraseña</a
+              ><i class="fa-solid fa-rotate-right" (click)="changePassword()"></i> Cambiar contraseña</a
             >
             <a class="dropdown-item"
-              ><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión</a
+              ><i class="fa-solid fa-right-from-bracket" (click)="logout()"></i> Cerrar sesión</a
             >
           </div>
         </li>
       </ul>
 
-      <!-- <a
-        class="nav-link profile-user d-flex align-items-center"
-        aria-expanded="false"
-      >
-        <i class="fa-solid fa-user-gear"></i>
-        <span>
-          <select name="" class="form-control" id="">
-            <option value="1">Agente</option>
-            <option value="1">Supervisor</option>
-          </select>
-        </span>
-        <i class="fa-solid fa-angle-down"></i>
-      </a>
-      <a
-        class="user-icon nav-link profile-user d-flex align-items-center"
-        data-bs-toggle="dropdown"
-        aria-expanded="false"
-      >
-        <img alt="" src="../assets/image/face.png" />
-        <span
-          >{{ dataAuthenticate.dataAuth.AuthUsuario.Data[0].NOMBRES_USUARIO }}
-          {{
-            dataAuthenticate.dataAuth.AuthUsuario.Data[0].APELLIDO_PATERNO
-          }}</span
-        >
-        <i class="fa-solid fa-angle-down"></i>
-      </a>
-      <div class="dropdown-menu">
-        <div class="menu-header-content p-3 border-bottom">
-          <div class="d-flex wd-100p">
-            <div class="ms-3 my-auto">
-              <h6 class="tx-15 font-weight-semibold mb-0">
-                {{
-                  dataAuthenticate.dataAuth.AuthUsuario.Data[0].NOMBRES_USUARIO
-                }}
-                {{
-                  dataAuthenticate.dataAuth.AuthUsuario.Data[0].APELLIDO_PATERNO
-                }}
-              </h6>
-              <span class="dropdown-title-text subtext op-6 tx-12">{{
-                nombreRol
-              }}</span>
-            </div>
-          </div>
-        </div>
-        <a class="dropdown-item" (click)="changePassword()"
-          ><i class="fa-solid fa-rotate-right"></i> Cambiar contraseña</a
-        >
-        <a class="dropdown-item" (click)="logout()"
-          ><i class="fa-solid fa-right-from-bracket"></i> Cerrar sesión</a
-        >
-      </div> -->
+      
+
+
+
+
     </div>
   </div>
 </header>

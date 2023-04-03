@@ -45,8 +45,8 @@ export class SidenavComponent implements OnInit {
   screenWidth = 770;
   multiple: boolean = false;
   isLoggedIn: boolean = false;
-  //navData = navbarData;
-  navData = [] as any[];
+  navData = navbarData;
+  //navData = [];
 
   menuxx$: Observable<any[]> | undefined;
 

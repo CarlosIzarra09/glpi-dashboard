@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   API_TICKET: "http://127.0.0.1:15103/api",
+  API_SEGURIDAD: "http://127.0.0.1:15102/api",
 };
 
 /*

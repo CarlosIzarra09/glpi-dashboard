@@ -8,6 +8,13 @@ const routes: Routes = [
     loadChildren: () => import('./pages/reports/dashboard/dashboard.module').then(
       m => m.DashboardModule)
   },
+  /*{
+    path: "reportes/categoria",
+    loadChildren: () =>
+      import("./pages/reports/report-category/report-category.module").then(
+        (mod) => mod.ReportCategoryModule
+      ),
+  },*/
 
 ]
 

@@ -86,6 +86,11 @@ export class HeaderComponent {
     this.modalRef = this.modalService.show(template);
   }
 
+  changePassword() {
 
+  }
+
+  logout() {
+  }
 
 }

@@ -20,14 +20,14 @@
               <div class="pb-0 mt-0">
                 <div class="d-flex">
                   <h4 class="text-25 font-weight-semibold mb-2">
-                    {{ getIndicator?.txd?.total }}
+                    {{ getIndicator.txd.total }}
                   </h4>
                 </div>
                 <p class="mb-0 text-13 text-muted">
                   Ayer
                   <i class="fa fa-caret-up mx-2 text-success"></i>
                   <span class="text-success font-weight-semibold">
-                    +{{ getIndicator?.txdy?.total }}</span
+                    +{{ getIndicator.txdy.total }}</span
                   >
                 </p>
               </div>
@@ -59,13 +59,13 @@
               <div class="pb-0 mt-0">
                 <div class="d-flex">
                   <h4 class="text-25 font-weight-semibold mb-2">
-                    {{ getIndicator?.txm?.total }}
+                    {{ getIndicator.txm.total }}
                   </h4>
                 </div>
                 <p class="mb-0 text-13 text-muted">
                   <!-- El mes pasado -->
                   <span
-                    ><b>{{ getIndicator?.txm?.name }}</b></span
+                    ><b>{{ getIndicator.txm.name }}</b></span
                   >
                 </p>
               </div>
@@ -97,7 +97,7 @@
               <div class="pb-0 mt-0">
                 <div class="d-flex">
                   <h4 class="text-25 font-weight-semibold mb-2">
-                    {{ getIndicator?.txt?.total }}
+                    {{ getIndicator.txt.total }}
                   </h4>
                 </div>
                 <p class="mb-0 text-13 text-muted">Tickets generados</p>
@@ -129,7 +129,7 @@
               <div class="pb-0 mt-0">
                 <div class="d-flex">
                   <h4 class="text-25 font-weight-semibold mb-2">
-                    {{ getIndicator?.tl?.total }}
+                    {{ getIndicator.tl.total }}
                   </h4>
                 </div>
                 <p class="mb-0 text-13 text-muted">Late</p>
@@ -197,7 +197,8 @@
     </div>
   </div>
 
-  <!--<div class="col-xl-6 col-lg-6 col-md-6 col-xs-12">
+  <!--
+  <div class="col-xl-6 col-lg-6 col-md-6 col-xs-12">
     <div class="card">
       <div class="d-flex card-head card-head-strech">
         Tickets aperturados por agente
@@ -230,7 +231,7 @@
     </div>
   </div>-->
 
-  <!--<div class="col-xl-12 col-lg-6 col-md-12 col-xs-12">
+ <!--<div class="col-xl-12 col-lg-6 col-md-12 col-xs-12">
     <div class="card">
       <div class="d-flex card-head card-head-strech">
         Últimos tickets registrados
@@ -265,7 +266,8 @@
     </div>
   </div>-->
 
-  <!--<div class="col-xl-6 col-lg-6 col-md-6 col-xs-12">
+  <!--
+  <div class="col-xl-6 col-lg-6 col-md-6 col-xs-12">
     <div class="card">
       <div class="d-flex card-head card-head-strech">Últimos eventos</div>
       <div class="card-body">
@@ -309,6 +311,7 @@
                 </tr>
               </thead>
               <tbody>
+
                 <tr *ngFor="let item of userOnline.data; let i = index">
                   <th scope="row">{{ i + 1 }}</th>
                   <td>{{ item.type || "" }}</td>
